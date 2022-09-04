@@ -1,8 +1,7 @@
-import 'package:ecom_thin_ui/theme/colors.dart';
-import 'package:ecom_thin_ui/theme/device_size_helper.dart';
+import 'package:shopping_app/theme/colors.dart';
+import 'package:shopping_app/theme/device_size_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../widgets/product_detail_image.dart';
 
 class ProductDetailScreen extends StatelessWidget {

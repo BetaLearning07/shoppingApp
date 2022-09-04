@@ -1,8 +1,8 @@
-import 'package:ecom_thin_ui/routes/app_pages.dart';
-import 'package:ecom_thin_ui/theme/colors.dart';
-import 'package:ecom_thin_ui/theme/device_size_helper.dart';
-import 'package:ecom_thin_ui/theme/ui_helper.dart';
-import 'package:ecom_thin_ui/widgets/left_title.dart';
+import 'package:shopping_app/routes/app_pages.dart';
+import 'package:shopping_app/theme/colors.dart';
+import 'package:shopping_app/theme/device_size_helper.dart';
+import 'package:shopping_app/theme/ui_helper.dart';
+import 'package:shopping_app/widgets/left_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:icofont_flutter/icofont_flutter.dart';
@@ -85,14 +85,14 @@ class AccountScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        'Rajdhani Garments',
+                        'Buyer Name',
                         style: Theme.of(context)
                             .textTheme
                             .headline6!
                             .copyWith(fontWeight: FontWeight.w500),
                       ),
                       const Divider(height: 1),
-                      Text('Siliguri ~ 9832893116',
+                      Text('Buyer Address',
                           style: Theme.of(context)
                               .textTheme
                               .bodyText1!

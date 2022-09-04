@@ -1,5 +1,5 @@
-import 'package:ecom_thin_ui/theme/device_size_helper.dart';
-import 'package:ecom_thin_ui/widgets/index.dart';
+import 'package:shopping_app/theme/device_size_helper.dart';
+import 'package:shopping_app/widgets/index.dart';
 import 'package:flutter/material.dart';
 
 class NoDataFound extends StatelessWidget {

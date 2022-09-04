@@ -1,17 +1,20 @@
-import 'package:ecom_thin_ui/widgets/extended_image.dart';
-import 'package:ecom_thin_ui/widgets/hosted_image.dart';
+import 'package:shopping_app/theme/device_size_helper.dart';
+import 'package:shopping_app/widgets/extended_image.dart';
+import 'package:shopping_app/widgets/hosted_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:ecom_thin_ui/theme/colors.dart';
-import 'package:ecom_thin_ui/theme/ui_helper.dart';
+import 'package:shopping_app/theme/colors.dart';
+import 'package:shopping_app/theme/ui_helper.dart';
 
 class ProductDetailImageWidget extends StatefulWidget {
   final List imageList;
+  final bool? showPageChangeBullet;
 
   const ProductDetailImageWidget({
     Key? key,
     required this.imageList,
+    this.showPageChangeBullet,
   }) : super(key: key);
 
   @override
@@ -66,7 +69,7 @@ class _ProductDetailImageWidgetState extends State<ProductDetailImageWidget> {
                 right: 5,
                 child: Container(
                   height: 20.h,
-                  width: 50.w,
+                  width: 40.w,
                   decoration: BoxDecoration(
                       color: AppColors.primaryGreyText4,
                       borderRadius: BorderRadius.circular(100.sp)),
@@ -119,6 +122,41 @@ class _ProductDetailImageWidgetState extends State<ProductDetailImageWidget> {
                 ),
               );
             },
+          ),
+        ),
+        Visibility(
+          visible: widget.showPageChangeBullet ?? false,
+          child: Column(
+            children: [
+              UIHelper.verticalSpaceSmall(),
+              SizedBox(
+                height: 10.h,
+                width: getWidth,
+                child: Center(
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    shrinkWrap: true,
+                    itemCount: widget.imageList.length,
+                    itemBuilder: (BuildContext context, int index2) {
+                      return Row(
+                        children: [
+                          Container(
+                            height: 5.h,
+                            width: 7.w,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.sp),
+                                color: currentIndex == index2
+                                    ? Colors.amber
+                                    : Colors.grey),
+                          ),
+                          UIHelper.horizontalSpaceExtraSmall()
+                        ],
+                      );
+                    },
+                  ),
+                ),
+              ),
+            ],
           ),
         )
       ],

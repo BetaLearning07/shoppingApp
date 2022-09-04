@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ecom_thin_ui">
+    package="com.example.shopping_app">
    <application
         android:label="EcomThin"
         android:name="${applicationName}"

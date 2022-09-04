@@ -1,4 +1,4 @@
-# ecom_thin_ui
+# shopping_app
 
 A new Flutter project.
 

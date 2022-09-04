@@ -16,6 +16,11 @@ abstract class Routes {
   static const addShippingAddress = '/add_shipping_address';
   static const editShippingAddress = '/edit_shipping_address';
   static const productDetail = '/product_detail';
+  static const checkout = '/checkout';
+  static const orderPlaced = '/order-placed';
+  static const orderFailed = '/order-failed';
+  static const sellerProducts = '/seller-products';
+  static const category = '/category';
 
   // static const initialRoute = '/home';
   // static const onBoard = '/onboard';

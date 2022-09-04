@@ -1,16 +1,21 @@
-import 'package:ecom_thin_ui/screens/account/account_screen.dart';
-import 'package:ecom_thin_ui/screens/address/add_shipping_address_screen.dart';
-import 'package:ecom_thin_ui/screens/address/edit_address_screen.dart';
-import 'package:ecom_thin_ui/screens/address/shipping_address_list_screen.dart';
-import 'package:ecom_thin_ui/screens/bank/bank_detail_screen.dart';
-import 'package:ecom_thin_ui/screens/cart/cart_screen.dart';
-import 'package:ecom_thin_ui/screens/cart/saved_cart_screen.dart';
-import 'package:ecom_thin_ui/screens/faq/faq_screen.dart';
-import 'package:ecom_thin_ui/screens/home/home_screen.dart';
-import 'package:ecom_thin_ui/screens/order/order_detail_screen.dart';
-import 'package:ecom_thin_ui/screens/order/order_list_screen.dart';
-import 'package:ecom_thin_ui/screens/product_detail/product_detail_screen.dart';
-import 'package:ecom_thin_ui/screens/wishlist/wishlist_screen.dart';
+import 'package:shopping_app/screens/account/account_screen.dart';
+import 'package:shopping_app/screens/address/add_shipping_address_screen.dart';
+import 'package:shopping_app/screens/address/edit_address_screen.dart';
+import 'package:shopping_app/screens/address/shipping_address_list_screen.dart';
+import 'package:shopping_app/screens/bank/bank_detail_screen.dart';
+import 'package:shopping_app/screens/cart/cart_screen.dart';
+import 'package:shopping_app/screens/cart/saved_cart_screen.dart';
+import 'package:shopping_app/screens/category/category_screen.dart';
+import 'package:shopping_app/screens/checkout/checkout_screen.dart';
+import 'package:shopping_app/screens/checkout/order_failed_screen.dart';
+import 'package:shopping_app/screens/checkout/order_successful_screen.dart';
+import 'package:shopping_app/screens/faq/faq_screen.dart';
+import 'package:shopping_app/screens/home/home_screen.dart';
+import 'package:shopping_app/screens/order/order_detail_screen.dart';
+import 'package:shopping_app/screens/order/order_list_screen.dart';
+import 'package:shopping_app/screens/product/product_detail_screen.dart';
+import 'package:shopping_app/screens/product/seller_product_screen.dart';
+import 'package:shopping_app/screens/wishlist/wishlist_screen.dart';
 import 'package:flutter/material.dart';
 
 part 'app_routes.dart';
@@ -49,8 +54,19 @@ class AppPages {
               return const AddShippingAddressScreen();
             case Routes.editShippingAddress:
               return const EditAddressScreen();
+            case Routes.checkout:
+              return const CheckOutScreen();
+            case Routes.orderPlaced:
+              return const OrderSucessScreen();
+            case Routes.orderFailed:
+              return const OrderFailedScreen();
+            case Routes.sellerProducts:
+              return const SellerProductsScreen();
+            case Routes.category:
+              return const CategoryScreen();
             case Routes.productDetail:
-              return const ProductDetailScreen();
+              return ProductDetailScreen(
+                  productId: settings.arguments.toString());
 
             default:
               return const HomeScreen();

@@ -1,4 +1,4 @@
-import 'package:ecom_thin_ui/data/home_model.dart';
+import 'package:shopping_app/data/home_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/index.dart';

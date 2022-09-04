@@ -1,4 +1,4 @@
-import 'package:ecom_thin_ui/theme/ui_helper.dart';
+import 'package:shopping_app/theme/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -148,10 +148,10 @@ class HomeFilterWidget extends SliverPersistentHeaderDelegate {
   }
 
   @override
-  double get maxExtent => 50.h;
+  double get maxExtent => 60.h;
 
   @override
-  double get minExtent => 50.h;
+  double get minExtent => 60.h;
 
   @override
   bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) => true;

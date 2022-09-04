@@ -1,5 +1,5 @@
-import 'package:ecom_thin_ui/data/categories_model.dart';
-import 'package:ecom_thin_ui/data/home_model.dart';
+import 'package:shopping_app/data/categories_model.dart';
+import 'package:shopping_app/data/home_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final homeDataProvider = Provider((ref) {

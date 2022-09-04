@@ -1,4 +1,4 @@
-import 'package:ecom_thin_ui/widgets/index.dart';
+import 'package:shopping_app/widgets/index.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 

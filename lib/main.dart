@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:ecom_thin_ui/routes/app_pages.dart';
-import 'package:ecom_thin_ui/theme/app_theme.dart';
+import 'package:shopping_app/routes/app_pages.dart';
+import 'package:shopping_app/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

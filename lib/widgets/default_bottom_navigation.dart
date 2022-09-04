@@ -1,11 +1,6 @@
 import 'dart:io';
-
-import 'package:ecom_thin_ui/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:icofont_flutter/icofont_flutter.dart';
-
-import 'package:ecom_thin_ui/screens/account/account_screen.dart';
-
 import '../theme/styles.dart';
 
 // tabBar

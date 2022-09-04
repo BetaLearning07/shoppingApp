@@ -53,7 +53,7 @@ class AppBarShopCartIconButton extends StatelessWidget {
           child: Center(
             child: Text(
               count,
-              style: TextStyle(color: Colors.white, fontSize: 9),
+              style: const TextStyle(color: Colors.white, fontSize: 9),
             ),
           ),
         ),

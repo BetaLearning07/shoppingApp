@@ -1,9 +1,9 @@
-import 'package:ecom_thin_ui/data/home_model.dart';
-import 'package:ecom_thin_ui/routes/app_pages.dart';
-import 'package:ecom_thin_ui/theme/device_size_helper.dart';
-import 'package:ecom_thin_ui/theme/styles.dart';
-import 'package:ecom_thin_ui/theme/ui_helper.dart';
-import 'package:ecom_thin_ui/widgets/index.dart';
+import 'package:shopping_app/data/home_model.dart';
+import 'package:shopping_app/routes/app_pages.dart';
+import 'package:shopping_app/theme/device_size_helper.dart';
+import 'package:shopping_app/theme/styles.dart';
+import 'package:shopping_app/theme/ui_helper.dart';
+import 'package:shopping_app/widgets/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,108 +16,120 @@ class ProductThumbnail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () async {
-        Navigator.pushNamed(context, Routes.productDetail);
-      },
-      onLongPress: () {
-        // _rotateDialog(context);
-        showModalBottomSheet(
-          context: context,
-          builder: ((context) => BottomSheetContent(
-                key: key,
-                productData: data!,
-              )),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          backgroundColor: Colors.white,
-        );
-      },
-      child: Card(
-        margin: const EdgeInsets.all(2),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Expanded(
-              flex: 8,
-              child: Container(
-                padding: const EdgeInsets.all(8),
-                child: HostedImage(imageurl: data!.image!, asdpectRatio: 1.0),
+    return Hero(
+      tag: data!.id.toString(),
+      child: Scaffold(
+        body: InkWell(
+          onTap: () async {
+            Navigator.pushNamed(context, Routes.productDetail,
+                arguments: data!.id);
+          },
+          onLongPress: () {
+            // _rotateDialog(context);
+            showModalBottomSheet(
+              context: context,
+              builder: ((context) => BottomSheetContent(
+                    key: key,
+                    productData: data!,
+                  )),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
               ),
-            ),
-            Expanded(
-              flex: 3,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                    child: Text(
-                      data!.brand == "" ? data!.categoryName! : data!.brand!,
-                      maxLines: 1,
-                      style: Theme.of(context)
-                          .textTheme
-                          .labelMedium!
-                          .copyWith(fontWeight: FontWeight.w500),
-                      overflow: TextOverflow.ellipsis,
-                    ),
+              backgroundColor: Colors.white,
+            );
+          },
+          child: Card(
+            margin: const EdgeInsets.all(2),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Expanded(
+                  flex: 8,
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    child:
+                        HostedImage(imageurl: data!.image!, asdpectRatio: 1.0),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                    child: Text(
-                      data!.title!,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.subtitle2!.copyWith(
-                          fontWeight: FontWeight.normal,
-                          color: AppColors.primaryGreyText2),
-                    ),
-                  ),
-                  UIHelper.verticalSpaceSmall(),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                ),
+                Expanded(
+                  flex: 3,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Expanded(
-                        child: Padding(
-                            padding: const EdgeInsets.only(left: 8.0),
-                            child: Text.rich(TextSpan(children: [
-                              TextSpan(
-                                text: '\u20B9 ',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .subtitle2!
-                                    .copyWith(
-                                      fontWeight: FontWeight.w400,
-                                      color: AppColors.primaryGreyText2,
-                                    ),
-                              ),
-                              TextSpan(
-                                text: '${data!.pricing!.price ?? 0}',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headline6!
-                                    .copyWith(
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: -.5),
-                              )
-                            ]))),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                        child: Text(
+                          data!.brand == ""
+                              ? data!.categoryName!
+                              : data!.brand!,
+                          maxLines: 1,
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelMedium!
+                              .copyWith(fontWeight: FontWeight.w500),
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
-                      const Expanded(
-                        child: Padding(
-                            padding: EdgeInsets.only(right: 8.0),
-                            child: HostedImage(
-                                imageurl:
-                                    'https://aseztak.ap-south-1.linodeobjects.com/notification/92fbab5f-ec07-421e-a010-ef65bc6887f5.png',
-                                asdpectRatio: 7)),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+                        child: Text(
+                          data!.title!,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: Theme.of(context)
+                              .textTheme
+                              .subtitle2!
+                              .copyWith(
+                                  fontWeight: FontWeight.normal,
+                                  color: AppColors.primaryGreyText2),
+                        ),
+                      ),
+                      UIHelper.verticalSpaceSmall(),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            child: Padding(
+                                padding: const EdgeInsets.only(left: 8.0),
+                                child: Text.rich(TextSpan(children: [
+                                  TextSpan(
+                                    text: '\u20B9 ',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .subtitle2!
+                                        .copyWith(
+                                          fontWeight: FontWeight.w400,
+                                          color: AppColors.primaryGreyText2,
+                                        ),
+                                  ),
+                                  TextSpan(
+                                    text: '${data!.pricing!.price ?? 0}',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headline6!
+                                        .copyWith(
+                                            fontWeight: FontWeight.w600,
+                                            letterSpacing: -.5),
+                                  )
+                                ]))),
+                          ),
+                          const Expanded(
+                            child: Padding(
+                                padding: EdgeInsets.only(right: 8.0),
+                                child: HostedImage(
+                                    imageurl:
+                                        'https://aseztak.ap-south-1.linodeobjects.com/notification/92fbab5f-ec07-421e-a010-ef65bc6887f5.png',
+                                    asdpectRatio: 7)),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

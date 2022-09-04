@@ -1,5 +1,5 @@
-import 'package:ecom_thin_ui/theme/colors.dart';
-import 'package:ecom_thin_ui/theme/ui_helper.dart';
+import 'package:shopping_app/theme/colors.dart';
+import 'package:shopping_app/theme/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

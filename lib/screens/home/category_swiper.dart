@@ -1,4 +1,4 @@
-import 'package:ecom_thin_ui/theme/device_size_helper.dart';
+import 'package:shopping_app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,7 +30,12 @@ class CategorSwiper extends StatelessWidget {
               itemCount: categories!.length,
               itemBuilder: (context, index) {
                 Categories category = categories![index];
-                return _buildBrandItem(context, category);
+                return InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.category);
+                  },
+                  child: _buildBrandItem(context, category),
+                );
               },
             ),
           )

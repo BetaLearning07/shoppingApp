@@ -1,8 +1,8 @@
-import 'package:ecom_thin_ui/data/home_model.dart';
-import 'package:ecom_thin_ui/screens/home/dynamic_widgets.dart';
-import 'package:ecom_thin_ui/screens/home/home_filter_widget.dart';
-import 'package:ecom_thin_ui/screens/home/search_bar.dart';
-import 'package:ecom_thin_ui/widgets/informative_banner.dart';
+import 'package:shopping_app/data/home_model.dart';
+import 'package:shopping_app/screens/home/dynamic_widgets.dart';
+import 'package:shopping_app/screens/home/home_filter_widget.dart';
+import 'package:shopping_app/screens/home/search_bar.dart';
+import 'package:shopping_app/widgets/informative_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,12 +28,6 @@ class HomeScreen extends ConsumerWidget {
         centerTitle: false,
         elevation: 0,
         titleSpacing: 0,
-        title: Image.asset(
-          "assets/images/logo.png",
-          // width: 100,
-          height: 30.h,
-          fit: BoxFit.contain,
-        ),
         actions: [
           IconButton(
             padding: EdgeInsets.fromLTRB(6.w, 6.h, 8.w, 6.h),

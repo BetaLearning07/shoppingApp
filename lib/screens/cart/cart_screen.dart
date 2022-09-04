@@ -1,7 +1,7 @@
-import 'package:ecom_thin_ui/theme/colors.dart';
-import 'package:ecom_thin_ui/theme/ui_helper.dart';
-import 'package:ecom_thin_ui/widgets/index.dart';
-import 'package:ecom_thin_ui/widgets/no_data_found.dart';
+import 'package:shopping_app/theme/colors.dart';
+import 'package:shopping_app/theme/ui_helper.dart';
+import 'package:shopping_app/widgets/index.dart';
+import 'package:shopping_app/widgets/no_data_found.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

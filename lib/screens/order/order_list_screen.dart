@@ -1,12 +1,12 @@
-import 'package:ecom_thin_ui/routes/app_pages.dart';
-import 'package:ecom_thin_ui/theme/device_size_helper.dart';
-import 'package:ecom_thin_ui/widgets/no_data_found.dart';
+import 'package:shopping_app/routes/app_pages.dart';
+import 'package:shopping_app/theme/device_size_helper.dart';
+import 'package:shopping_app/widgets/no_data_found.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:icofont_flutter/icofont_flutter.dart';
-import 'package:ecom_thin_ui/widgets/index.dart';
-import 'package:ecom_thin_ui/theme/styles.dart';
+import 'package:shopping_app/widgets/index.dart';
+import 'package:shopping_app/theme/styles.dart';
 import 'package:flutter/material.dart';
 import '../../theme/ui_helper.dart';
 

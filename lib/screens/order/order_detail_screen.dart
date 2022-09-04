@@ -1,7 +1,7 @@
-import 'package:ecom_thin_ui/theme/device_size_helper.dart';
-import 'package:ecom_thin_ui/theme/styles.dart';
-import 'package:ecom_thin_ui/theme/ui_helper.dart';
-import 'package:ecom_thin_ui/widgets/hosted_image.dart';
+import 'package:shopping_app/theme/device_size_helper.dart';
+import 'package:shopping_app/theme/styles.dart';
+import 'package:shopping_app/theme/ui_helper.dart';
+import 'package:shopping_app/widgets/hosted_image.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

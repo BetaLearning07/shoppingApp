@@ -78,16 +78,13 @@ ThemeData appTheme() {
         fontWeight: FontWeight.normal,
         color: Colors.black,
       ),
+
       overline: TextStyle(
         fontSize: 10.0.sp,
         fontWeight: FontWeight.normal,
         color: Colors.black,
       ),
-      // titleSmall: TextStyle(
-      //   fontSize: 16.0.sp,
-      //   fontWeight: FontWeight.normal,
-      //   color: Colors.black,
-      // ),
+
       // titleMedium: TextStyle(
       //   fontSize: 16.0.sp,
       //   fontWeight: FontWeight.normal,

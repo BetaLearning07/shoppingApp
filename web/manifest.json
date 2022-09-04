@@ -1,6 +1,6 @@
 {
-    "name": "ecom_thin_ui",
-    "short_name": "ecom_thin_ui",
+    "name": "shopping_app",
+    "short_name": "shopping_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

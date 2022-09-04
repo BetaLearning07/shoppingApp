@@ -1,8 +1,7 @@
-import 'dart:io';
-
-import 'package:ecom_thin_ui/theme/styles.dart';
-import 'package:ecom_thin_ui/theme/ui_helper.dart';
-import 'package:ecom_thin_ui/widgets/local_image.dart';
+import 'package:shopping_app/theme/styles.dart';
+import 'package:shopping_app/theme/ui_helper.dart';
+import 'package:shopping_app/widgets/dotted_divider.dart';
+import 'package:shopping_app/widgets/local_image.dart';
 import 'package:flutter/material.dart';
 
 class InformativeBanner extends StatelessWidget {
@@ -52,7 +51,7 @@ class InformativeBanner extends StatelessWidget {
             ],
           ),
           UIHelper.verticalSpaceMedium(),
-          DottedSeperatorView(),
+          const DottedSeperatorView(),
           UIHelper.verticalSpaceMedium(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -170,29 +169,6 @@ class _GenieCardView extends StatelessWidget {
                 ],
               )
             ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class DottedSeperatorView extends StatelessWidget {
-  const DottedSeperatorView({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 8.0,
-      child: ListView.builder(
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
-        itemCount: 400,
-        itemBuilder: (context, index) => ClipOval(
-          child: Container(
-            margin: const EdgeInsets.all(3.0),
-            width: 2.0,
-            color: Colors.grey,
           ),
         ),
       ),
