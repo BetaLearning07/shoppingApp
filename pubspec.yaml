@@ -1,0 +1,37 @@
+name: ecom_thin_ui
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=2.17.5 <3.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  flutter_screenutil: ^5.5.3+2
+  icofont_flutter: ^1.4.0
+  flutter_swiper_null_safety: ^1.0.2
+  flutter_form_builder: ^7.4.0
+  form_builder_validators: ^8.2.0
+  flutter_riverpod: ^1.0.4
+  flutter_svg: ^1.1.1+1
+  webview_flutter: ^3.0.4
+  cached_network_image: 3.2.1
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  assets: 
+    - assets/images/
+    - assets/icons/
+    - assets/json/
+  fonts: 
+    - family: Iconfont
+      fonts: 
+        - asset: assets/fonts/iconfont.ttf
+  uses-material-design: true
+
